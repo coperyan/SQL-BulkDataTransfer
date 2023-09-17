@@ -1,0 +1,33 @@
+﻿[
+  {
+    "source": {
+
+      "ConnectionName": "crm-sql",
+      "Database": "crm",
+      "Schema": "dbo",
+      "Object": "Customers"
+    },
+    "destination": {
+      "ConnectionName": "bi-sql",
+      "Database": "Reporting",
+      "Schema": "dbo",
+      "Object": "Customers"
+    }
+  },
+  {
+    "source": {
+
+      "ConnectionName": "pos-sql",
+      "Database": "Pos",
+      "Schema": "dbo",
+      "Object": "Inventory"
+    },
+    "destination": {
+      "ConnectionName": "bi-sql",
+      "Database": "Reporting",
+      "Schema": "dbo",
+      "Object": "Inventory"
+    }
+  }
+]
+
