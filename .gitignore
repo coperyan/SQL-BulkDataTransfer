@@ -1,4 +1,13 @@
-# globs
+#Secrets
+*app.config
+!example_config/app.config
+
+*transfer_config.json
+!transfer_config.json
+
+
+#
+globs
 Makefile.in
 *.userprefs
 *.usertasks

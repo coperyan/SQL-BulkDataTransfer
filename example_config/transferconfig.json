@@ -1,7 +1,6 @@
-﻿[
+[
   {
     "source": {
-
       "connectionName": "crm-sql",
       "database": "crm",
       "schema": "dbo",
@@ -16,7 +15,6 @@
   },
   {
     "source": {
-
       "connectionName": "pos-sql",
       "database": "Pos",
       "schema": "dbo",
@@ -30,4 +28,3 @@
     }
   }
 ]
-

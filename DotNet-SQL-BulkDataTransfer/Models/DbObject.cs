@@ -6,7 +6,7 @@ namespace SQL.BulkDataTransfer.Models
 		public string connectionName { get; set; }
 		public string database { get; set; }
 		public string schema { get; set; }
-		public string name { get; set; }
+		public string objectName { get; set; }
 	}
 }
 
