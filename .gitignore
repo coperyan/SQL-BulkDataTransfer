@@ -5,6 +5,7 @@
 *transfer_config.json
 !transfer_config.json
 
+*.DS_Store
 
 #
 globs

@@ -6,11 +6,9 @@ namespace SQL.BulkDataTransfer.Services
 {
 	public class DbService
 	{
+		private static int SQL_COMMAND_TIMEOUT = 600;
+		private static int BULK_COPY_TIMEOUT = 600;
 
-		private static string _ConnectionString(string connectionName)
-		{
-			return ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
-		}
 
 		public static void TruncateTable(DbObject table)
 		{
@@ -40,7 +38,8 @@ namespace SQL.BulkDataTransfer.Services
 				Console.WriteLine("Starting row count: {0}", rwcnt);
 
 				SqlCommand commandSourceData = new SqlCommand(source.getSelectQuery(), sourceConnection);
-				SqlDataReader reader = commandSourceData.ExecuteReader();
+				commandSourceData.CommandTimeout = SQL_COMMAND_TIMEOUT;
+                SqlDataReader reader = commandSourceData.ExecuteReader();
 
 				using (SqlConnection destinationConnection = new SqlConnection(dest.getSqlConnectionString()))
 				{
@@ -49,6 +48,7 @@ namespace SQL.BulkDataTransfer.Services
 					using (SqlBulkCopy bulkCopy = new SqlBulkCopy(destinationConnection))
 					{
 						bulkCopy.DestinationTableName = string.Format("{0}.{1}", dest.schema, dest.objectName);
+						bulkCopy.BulkCopyTimeout = BULK_COPY_TIMEOUT;
 
 						try
 						{
