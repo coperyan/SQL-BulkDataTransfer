@@ -2,31 +2,76 @@
   {
     "source": {
 
-      "connectionName": "crm-sql",
-      "database": "crm",
+      "connectionName": "sql27",
+      "database": "_rcope",
       "schema": "dbo",
-      "objectName": "Customers"
+      "objectName": "CategoryMapping"
     },
     "destination": {
-      "connectionName": "bi-sql",
-      "database": "Reporting",
-      "Schema": "dbo",
+      "connectionName": "sqlanalytics",
+      "database": "EmailMarketing",
+      "Schema": "import",
+      "objectName": "CategoryMapping"
+    }
+  },
+  {
+    "source": {
+
+      "connectionName": "sql27",
+      "database": "_Boris",
+      "schema": "dbo",
+      "objectName": "vw_Warehouse"
+    },
+    "destination": {
+      "connectionName": "sqlanalytics",
+      "database": "EmailMarketing",
+      "Schema": "import",
+      "objectName": "Warehouses"
+    }
+  },
+  {
+    "source": {
+
+      "connectionName": "sql27",
+      "database": "_Analytics",
+      "schema": "dbo",
+      "objectName": "v_EmailCUCs"
+    },
+    "destination": {
+      "connectionName": "sqlanalytics",
+      "database": "EmailMarketing",
+      "Schema": "import",
+      "objectName": "CUCs"
+    }
+  },
+  {
+    "source": {
+
+      "connectionName": "sql27",
+      "database": "_Analytics",
+      "schema": "dbo",
+      "objectName": "v_EmailCustomers"
+    },
+    "destination": {
+      "connectionName": "sqlanalytics",
+      "database": "EmailMarketing",
+      "Schema": "import",
       "objectName": "Customers"
     }
   },
   {
     "source": {
 
-      "connectionName": "pos-sql",
-      "database": "Pos",
+      "connectionName": "sql27",
+      "database": "_Analytics",
       "schema": "dbo",
-      "objectName": "Inventory"
+      "objectName": "v_EmailCustomerCategory"
     },
     "destination": {
       "connectionName": "bi-sql",
       "database": "Reporting",
-      "schema": "dbo",
-      "objectName": "Inventory"
+      "schema": "import",
+      "objectName": "CustomerCategory"
     }
   }
 ]

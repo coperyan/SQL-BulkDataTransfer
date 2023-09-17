@@ -20,12 +20,18 @@ namespace SQL.BulkDataTransfer
             //Get transfer queue from config JSON
             foreach(var transfer in ConfigService.GetTransfers())
             {
-                Console.WriteLine(string.Format("{0} - Starting transfer for {1}..", DateTime.Now, transfer.source.objectName));
 
-                DbService.TruncateTable(transfer.destination);
-                DbService.BulkTransfer(transfer.source, transfer.destination);
+                if(transfer.destination.objectName != "CustomerCategory")
+                {
+                    Console.WriteLine(string.Format("{0} - Starting transfer for {1}..", DateTime.Now, transfer.source.objectName));
 
-                Console.WriteLine(string.Format("{0} - Starting transfer for {1}..", DateTime.Now, transfer.source.objectName));
+                    DbService.TruncateTable(transfer.destination);
+                    DbService.BulkTransfer(transfer.source, transfer.destination);
+
+                    Console.WriteLine(string.Format("{0} - Starting transfer for {1}..", DateTime.Now, transfer.source.objectName));
+                }
+
+
             }
 
         }
