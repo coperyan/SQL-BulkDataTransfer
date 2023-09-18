@@ -4,7 +4,7 @@
 - Performs a `transfer` (copy) for a user-defined list of Sql `objects` (tables, views, etc.)
 
 ## Configuration
-See the example [transferconfig.json](example_config/transferconfig.json) file
+See the example [transferconfig.json](example_config/transferconfig.json)
 Each item in the outer array represents a database operation `source` to `destination`
 
 ```json
