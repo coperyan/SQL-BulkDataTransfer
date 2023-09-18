@@ -5,6 +5,7 @@
 
 ## Configuration
 See the example [transferconfig.json](example_config/transferconfig.json)
+
 Each item in the outer array represents a database operation `source` to `destination`
 
 ```json
