@@ -44,7 +44,7 @@ foreach(var transfer in ConfigService.GetTransfers())
 
 ## Dependencies 
 
--`.NETCore 7.0.11`
+- `.NETCore 7.0.11`
 - `Newtonsoft.Json 13.0.3`
   - Parses the local .json configuration
 - `System.Configuration.ConfigurationManager - 7.0.0`
