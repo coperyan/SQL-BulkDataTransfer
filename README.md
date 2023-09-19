@@ -39,7 +39,8 @@ foreach(var transfer in ConfigService.GetTransfers())
     DbService.BulkTransfer(transfer.source, transfer.destination);
 
     Console.WriteLine(string.Format("{0} - Starting transfer for {1}..", DateTime.Now, transfer.source.objectName));
-}```
+}
+```
 
 ## Dependencies 
 
