@@ -1,4 +1,4 @@
-# SQL - Bulk Data Transfer App
+# SQL - Bulk Copy App
 - An extremely efficient solution for large data movement between SQL server instances.
 - Blows SSIS, turbodbc (Python), etc. out of the water.
 - Performs a `transfer` (copy) for a user-defined list of Sql `objects` (tables, views, etc.)
